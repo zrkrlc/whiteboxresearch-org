@@ -1,0 +1,41 @@
+# DEFAULT
+*~
+.idea
+/.DS_Store
+.DS_Store
+/classes
+/lib
+/target
+closure
+/core.js
+/coreadvanced.js
+/coresimple.js
+/out
+*out
+.lein*
+/pom.xml
+*.iml
+.repl*
+*.swp
+clojurescript_release_*
+closure-release-*
+
+
+# COMMON
+.cpcache
+.shadow-cljs
+.clj-kondo
+.calva
+.lsp
+.vscode
+*.code-workspace
+.lein-repl-history
+.nrepl-port
+.nrepl-repl-history
+.node_repl
+node_modules
+package-lock.json
+
+# BUILDS
+**/builds/*
+**/public/js/*
