@@ -31,17 +31,16 @@
 
 ## Notes
 
-This is a reusable template for rapid frontend prototyping using `re-frame`. It is also easy to swap it for `re-posh` just by adding it as a dependency. All routing is done via `reitit` and its various sublibraries.
+This is a reusable template for rapid frontend prototyping with `re-frame`. It's also easy to swap it for `re-posh` just by adding it as a dependency. All routing is done via `reitit` and its various sub-libraries.
 
 The structure of the codebase follows the examples in `re-frame`'s documentation:
 
 ```
 src/
 ├─ core.cljs
-├─ db.cljs
 ├─ events.cljs
 ├─ subs.cljs
-├─ v
+├─ views.cljs
 ```
 
 It is recommended to stick to this arrangement until your codebase grows significantly.
