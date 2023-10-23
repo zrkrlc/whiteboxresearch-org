@@ -1,3 +1,64 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --repeat: 0.5s;
+    /* animation timing */
+    --height: 6px;
+    /* total pixel height from scanline top to bottom of animation */
+    --area: 60%;
+    /* percentage of height the scanline covers */
+}
+
+html,
+body {
+    height: 100vh;
+    overflow: hidden;
+    background-color: #1b1212;
+}
+
+@keyframes scan {
+    0% {
+        background-position-y: 0px;
+        backdrop-filter: blur(2px);
+    }
+
+    100% {
+        background-position-y: var(--height);
+        background-color: rgba(1, 1, 1, 1);
+    }
+}
+
+#whitebox-container {
+    animation: scan var(--repeat) linear infinite;
+    transform-origin: center;
+    background: linear-gradient(to bottom, #000, #000 var(--area), #ccc var(--area), #ccc);
+    background-color: black;
+    background-size: 100% var(--height);
+    background-position-y: 0px;
+}
+
+
+
+button:hover {
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        z-index: 10;
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+
+    to {
+        z-index: 10;
+        text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+}
+
+.target {
+    scroll-behavior: smooth;
+}
