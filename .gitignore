@@ -38,4 +38,4 @@ package-lock.json
 
 # BUILDS
 **/builds/*
-**/public/js/*
+# **/public/js/*
